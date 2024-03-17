@@ -15,6 +15,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ```sh
 npm install
 ```
+*Make sure to incorporate own API Keys
 
 ### Compile and Hot-Reload for Development
 
@@ -26,6 +27,12 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Running backend
+
+```sh
+node server.js
 ```
 
 ### Miscellanoue:
