@@ -59,7 +59,7 @@ import CityList from "../components/CityList.vue";
   const searchError = ref(null);
 
 
-  const MAPBOX_API_KEY = "pk.eyJ1IjoiYWRpY2hpbnRhbGEiLCJhIjoiY2xyNnpsNTJmMDNuYzJscWFkNnBjaWc0ayJ9.Df0KNhdAB8zXPNIQDDpqzg"
+  const MAPBOX_API_KEY = "Your API key from MapBox"
 
   // Creates a timeout and then makes a request if search isn't null
   const getSearchResults = () =>
