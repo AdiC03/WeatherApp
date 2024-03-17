@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Miscellanoue:
+This project is a spin off from creating the weather app in vue playlist from NetNinja. The things that are different include using a different API (WeatherAPI instead of OpenWeather, and implementing a database instead of saving to local storage. Some future improvements (if time permits) include fixing the code to disable adding the same city twice, and maybe adding another feature to add memes based on the specific weather. 
