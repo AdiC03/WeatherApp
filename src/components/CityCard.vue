@@ -51,14 +51,11 @@ const deleteCity = async (cityId) => {
     try {
         // Construct the URL with the actual city ID
         const url = `/api/delete/${cityId}`;
-        const response = await axios.delete(url); // Use axios.delete for DELETE requests
-        // Handle response, e.g., notify the user or update UI to remove the deleted city
-        console.log(response.data.message); // Assuming your backend sends back a confirmation message
-        // Optionally, trigger a refresh of the city list in the parent component or remove the city from the local state
-        emits('cityDeleted', cityId);
+        const response = await axios.delete(url); // delete request
+        console.log(response.data.message); 
+        emits('cityDeleted', cityId); // Triggers refresh of city parent component and removes the city
     } catch (error) {
         console.error('Error deleting city:', error.response ? error.response.data : error);
-        // Handle error, e.g., notify the user that the deletion failed
     }
 }
 
