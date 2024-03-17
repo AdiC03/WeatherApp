@@ -6,7 +6,7 @@ import cors from 'cors';
 const { Pool } = pg;
 const app = express();
 const port = 3000;
-const passcode = 'Test123456'
+const passcode = 'Your passcode'
 
 // Connect to PostgreSQL
 const pool = new Pool({
