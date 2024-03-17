@@ -78,7 +78,7 @@ const toggleModal = () =>
 
 const savedCities = ref([]);
 const route = useRoute();
-const router = useRouter(); // get rid of preview
+const router = useRouter(); // to get rid of preview
 
 const addCity = async () => {
   const locationObj = {
@@ -106,7 +106,6 @@ console.log(locationObj.long)
     savedCities.value.push(savedCity);
 
     console.log('City saved:', savedCity);
-    // Handle any post-save actions, like updating UI or local state
   } catch (error) {
     console.log("error in sitenav")
     console.error('Error saving city:', error);
