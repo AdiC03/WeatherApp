@@ -45,7 +45,7 @@
     savedCities.value = savedCities.value.map((city, index) => {
       // Match the property names with those from your database and the weather API
       return {
-        id: city.id, // Assuming your database provides an id
+        id: city.id, // Future fix maybe to take out ID entirely since no need for it
         name: city.city,
         region: city.territory,
         lat: city.latitude,
