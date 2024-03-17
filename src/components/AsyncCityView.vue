@@ -36,31 +36,6 @@
     <!-- Seperation -->
     <hr class="border-white border-opacity-10 border w-full" />
 
-    <!-- Hour Weather -->
-    <!--
-<div class="text-white">
-    
-    <div class="overflow-x-auto">
-      <div class="flex whitespace-nowrap">
-        
-        <div v-for="hourData in next24Hours" :key="hourData.time_epoch" class="flex-none mx-2 my-4">
-          
-          <div class="flex flex-col items-center text-center">
-            
-            <p class="text-sm mb-1">
-              {{ new Date(hourData.time).toLocaleTimeString("en-us", { hour: 'numeric', minute: 'numeric' }) }}
-            </p>
-           
-            <img class="w-10 h-10 mb-1" :src="hourData.condition.icon" alt="Weather Icon" />
-            
-            <p class="text-md">{{ Math.round(hourData.temp_f) }}&deg;</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-
      <!-- Hourly Weather -->
      <div class="max-w-screen-md w-full py-12">
       <div class="mx-8 text-white">
@@ -143,6 +118,7 @@ const getWeatherData = async () => {
 
 const weatherData = await getWeatherData();
 
+// Function to compute the next 24 hours (even if there's overlap between the days
 const next24Hours = computed(() => {
     const hours = [];
     const currentTime = new Date();
