@@ -19,7 +19,7 @@ const pool = new Pool({
 });
 
 app.use(cors());
-app.use(express.json()); // for parsing application/json
+app.use(express.json());
 
 // API endpoint for adding a city
 app.post('/addCity', async (req, res) => {
@@ -30,8 +30,8 @@ app.post('/addCity', async (req, res) => {
       [territory, city, lat, long]
     );
 
+    // Statement for no duplicates; needs fixing
     if (newCity.rowCount === 0) {
-      // No new row was inserted because of the ON CONFLICT clause
       return res.status(409).json({ message: 'City already exists' });
     }
 
@@ -42,7 +42,7 @@ app.post('/addCity', async (req, res) => {
   }
 });
 
-// API endpoint for retrieving all cities
+// API endpoints for retrieving all cities
 app.get('/cities', async (req, res) => {
   try {
     const allCities = await pool.query('SELECT * FROM savedlocations.cities');
