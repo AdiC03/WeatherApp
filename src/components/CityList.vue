@@ -22,7 +22,7 @@
   savedCities.value = savedCities.value.filter(city => city.id !== deletedCityId);
 };
 
-  const WEATHER_API_KEY = '49cf6cb4542846d2a39194046241101'
+  const WEATHER_API_KEY = ''
   
   const getCities = async () => {
   try {
